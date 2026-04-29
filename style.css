@@ -1,0 +1,133 @@
+/* GLOBAL STYLES */
+body {
+  margin: 0;
+  font-family: "Consolas", "Courier New", monospace;
+  background: #0a0a0a;
+  color: #d0d0d0;
+  line-height: 1.6;
+}
+
+h1, h2, h3 {
+  color: #00ff88;
+  text-shadow: 0 0 10px #00ff88;
+  letter-spacing: 1px;
+}
+
+a {
+  color: #00ff88;
+  text-decoration: none;
+}
+
+/* HERO SECTION */
+.hero {
+  position: relative;
+  height: 90vh;
+  background: url("images/hero.jpg") center/cover no-repeat;
+  display: flex;
+  justify-content: left;
+  align-items: center;
+  color: #00ff88;
+  text-shadow: 0 0 15px #00ff88;
+  overflow: hidden;
+}
+
+/* UALBANY LOGO IN TOP RIGHT */
+.hero::after {
+  content: "";
+  background: url("images/ualbany_logo.png") center/contain no-repeat;
+  width: 120px;
+  height: 120px;
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  opacity: 0.95;
+  z-index: 3;
+}
+
+.hero::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.65); /* adjust darkness here */
+  backdrop-filter: blur(2px);      /* optional: adds a glassy feel */
+  z-index: 1;
+}
+
+/* HERO CONTENT */
+.hero-content {
+  position: relative;
+  left: 100px;
+  z-index: 2;
+  text-align: left;
+  animation: fadeIn 2s ease forwards;
+  z-index: 2;
+}
+
+/* SECTIONS */
+section {
+  padding: 80px 10%;
+  background: #0f0f0f;
+  border-top: 1px solid #00ff88;
+  border-bottom: 1px solid #00ff88;
+}
+
+/* PROJECT GRID */
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+}
+
+.card {
+  background: #111;
+  padding: 20px;
+  border-radius: 10px;
+  border: 1px solid #00cc66;
+  box-shadow: 0 0 15px rgba(0, 255, 136, 0.2);
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 0 25px rgba(0, 255, 136, 0.4);
+}
+
+/* GALLERY */
+.gallery-row {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.gallery-row img {
+  width: 300px;
+  border-radius: 10px;
+  border: 2px solid #00ff88;
+  box-shadow: 0 0 20px rgba(0, 255, 136, 0.3);
+}
+
+/* PROFILE IMAGE */
+.profile-img {
+  width: 180px;
+  border-radius: 50%;
+  border: 3px solid #00ff88;
+  box-shadow: 0 0 20px rgba(0, 255, 136, 0.4);
+  display: block;
+  margin: 0 auto 20px auto;
+}
+
+/* FOOTER */
+footer {
+  text-align: center;
+  padding: 20px;
+  background: #000;
+  color: #00ff88;
+  border-top: 1px solid #00ff88;
+}
+
+/* ANIMATIONS */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
