@@ -142,6 +142,19 @@ section {
   box-shadow: 0 0 20px rgba(0, 255, 136, 0.3);
 }
 
+#topBtn {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  padding: 10px 15px;
+  background: #00ff88;
+  color: #000;
+  border-radius: 8px;
+  font-size: 20px;
+  box-shadow: 0 0 10px #00ff88;
+  z-index: 5;
+}
+
 /* FOOTER */
 footer {
   text-align: center;
