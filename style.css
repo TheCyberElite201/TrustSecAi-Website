@@ -117,6 +117,31 @@ section {
   margin: 0 auto 20px auto;
 }
 
+.contact-wrapper {
+  display: flex;
+  align-items: center;
+  gap: 150px;
+
+  max-width: 700px;
+  width: 100%;
+  margin: 0 auto;
+}
+
+.contact-text {
+  text-align: right;
+  flex: 1;
+}
+
+.contact-img {
+  width: 300px;
+  max-width: 100%;
+  height: auto;
+  object-fit: contain;
+  border-radius: 10px;
+  border: 2px solid #00ff88;
+  box-shadow: 0 0 20px rgba(0, 255, 136, 0.3);
+}
+
 /* FOOTER */
 footer {
   text-align: center;
